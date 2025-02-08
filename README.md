@@ -1,3 +1,5 @@
+docker build -t myubuntu . && docker container run -it -v /var/run/docker.sock:/var/run/docker.sock -v ./:/repo myubuntu /bin/bash
+
 # Overview
 
 This repository contains assignment starter code for buildroot based assignments for the course Advanced Embedded Software Design, ECEN 5713
