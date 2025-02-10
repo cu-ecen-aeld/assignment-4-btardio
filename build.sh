@@ -9,6 +9,15 @@ git submodule init
 git submodule sync
 git submodule update
 
+if [ $# -lt 1 ]
+then
+        echo "Using default directory ${EXTERNAL_REL_BUILDROOT} for BR2_EXTERNAL"
+    else
+        EXTERNAL_REL_BUILDROOT=$1
+        echo "Using passed directory ${EXTERNAL_REL_BUILDROOT} for BR2_EXTERNAL"
+fi
+
+
 set -e 
 cd `dirname $0`
 

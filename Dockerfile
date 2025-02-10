@@ -40,6 +40,9 @@ RUN apt-get install -y libelf-dev
 RUN apt-get install -y cpio
 RUN apt-get install -y qemu-system-arm qemu
 
+RUN apt-get install -y rsync
+RUN apt-get install -y git
+
 ADD entrypoint.sh /entrypoint.sh
 RUN echo "set number" >> /root/.vimrc
 RUN echo "set laststatus=2" >> /root/.vimrc
@@ -48,7 +51,15 @@ RUN echo "set tabstop=4" >> /root/.vimrc
 RUN echo "set shiftwidth=4" >> /root/.vimrc
 RUN echo "set expandtab" >> /root/.vimrc
 RUN echo "export PATH=$PATH:/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/" >> /root/.bashrc
+
+RUN mkdir -p /root/.ssh
+COPY id_ed25519 /root/.ssh/id_ed25519
+
+
 RUN chmod +x /entrypoint.sh
+
+
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 
