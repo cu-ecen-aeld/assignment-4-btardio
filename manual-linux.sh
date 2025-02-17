@@ -8,6 +8,18 @@ ARCH=arm64
 CROSS_COMPILE=aarch64-none-linux-gnu-
 MYPWD=$(pwd)
 
+
+if [ ! -d "arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu" ]; then
+	wget -q https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+	tar -xf arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+	rm arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+fi
+
+PATH=$PATH:arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/
+export PATH
+
+
+
 if [ $# -lt 1 ]
 then
 	echo "Using default directory ${OUTDIR} for output"

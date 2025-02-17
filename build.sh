@@ -56,6 +56,8 @@ MYDIR=$(pwd)
 # make -C buildroot source   # download the files but doesnt seem to be working
 make -C buildroot
 
+cd ${MYDIR}
+
 bash ${MYDIR}/manual-linux.sh
 
 cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}/buildroot/output/images
