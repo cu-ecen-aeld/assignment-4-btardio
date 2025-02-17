@@ -60,6 +60,8 @@ cd ${MYDIR}
 
 bash ${MYDIR}/manual-linux.sh
 
+set -e
+
 cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}/buildroot/output/images
 
 #bash complete-assignment.sh
