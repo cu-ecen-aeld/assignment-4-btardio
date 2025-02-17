@@ -18,13 +18,25 @@ then
 fi
 
 
+mkdir -p buildroot
+cp buildroot_working_menuconfig.config buildroot/.config
+
+ARCH=arm64
+# make -C buildroot menuconfig
+make -C buildroot source   # download the files but doesnt seem to be working
+make -C buildroot
+
+bash manual-linux.sh
+
+cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image buildroot/output/images
+
+#bash complete-assignment.sh
+
+
 set -e 
 cd `dirname $0`
 
-cp buildroot_working_menuconfig.config buildroot/.config
-bash complete-assignment.sh
-
-
+mkdir -p buildroot
 
 
 if [ ! -e buildroot/.config ]

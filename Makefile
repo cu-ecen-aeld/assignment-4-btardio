@@ -1,8 +1,8 @@
-CONFIG_DIR=/repo/base_external/package/aesd-assignments/
+CONFIG_DIR=base_external/package/aesd-assignments/
 export CONFIG_DIR
-BR2_EXTERNAL=/repo/base_external/package/aesd-assignments/
+BR2_EXTERNAL=base_external/package/aesd-assignments/
 export BR2_EXTERNAL
-BR2_DEFCONFIG=/repo/base_external/company/virt/qemu_aarch64_virt_defconfig
+BR2_DEFCONFIG=base_external/company/virt/qemu_aarch64_virt_defconfig
 export BR2_DEFCONFIG
 MYPWD=$(pwd)
 ARCH=arm64
@@ -72,12 +72,12 @@ makebuildroot :
 	
 
 
-mymake:
+#mymake:
 	#$(MAKE) -C buildroot ARCH=arm
-	$( shell echo "oooOOOooo" )
+#	$( shell echo "oooOOOooo" )
 
-copy_config_linux:
-	$( shell cp /repo/base_external/company/virt/linux.config /repo/buildroot/.config )
-	$( shell cp /arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc /repo/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc )
+#copy_config_linux:
+#	$( shell cp /repo/base_external/company/virt/linux.config /repo/buildroot/.config )
+#	$( shell cp /arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc /repo/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc )
 
 #:

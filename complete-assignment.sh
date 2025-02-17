@@ -2,11 +2,11 @@
 
 ARCH=arm64
 
-make -C /repo
+make
 
-manual-linux.sh
+bash manual-linux.sh
 
-cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image /repo/buildroot/output/images
+cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image buildroot/output/images
 
 
 
