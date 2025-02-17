@@ -27,7 +27,7 @@ if [ ! -d "arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu" ]; then
     rm arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
 fi
 
-PATH=$PATH:arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/
+PATH=$PATH:$(pwd)/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/
 export PATH
 ARCH=arm64
 CONFIG_DIR=$(pwd)/base_external/package/aesd-assignments/
