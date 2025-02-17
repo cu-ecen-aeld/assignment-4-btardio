@@ -48,14 +48,17 @@ export CXX
 CROSS_COMPILE=aarch64-none-linux-gnu-
 export CROSS_COMPILE
 
+MYDIR=$(pwd)
+
+#bash manual-linux.sh
 
 # make -C buildroot menuconfig
 # make -C buildroot source   # download the files but doesnt seem to be working
 make -C buildroot
 
-bash manual-linux.sh
+bash ${MYDIR}/manual-linux.sh
 
-cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image buildroot/output/images
+cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}/buildroot/output/images
 
 #bash complete-assignment.sh
 
