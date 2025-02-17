@@ -21,12 +21,20 @@ fi
 mkdir -p buildroot
 cp buildroot_working_menuconfig.config buildroot/.config
 
+if [ ! -d "arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu" ]; then
+    wget -P / https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+    tar -xvf /arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+    rm arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+fi
+
+PATH=$PATH:arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/
+export PATH
 ARCH=arm64
-CONFIG_DIR=base_external/package/aesd-assignments/
+CONFIG_DIR=$(pwd)/base_external/package/aesd-assignments/
 export CONFIG_DIR
-BR2_EXTERNAL=base_external/package/aesd-assignments/
+BR2_EXTERNAL=$(pwd)/base_external/package/aesd-assignments/
 export BR2_EXTERNAL
-BR2_DEFCONFIG=base_external/company/virt/qemu_aarch64_virt_defconfig
+BR2_DEFCONFIG=$(pwd)/base_external/company/virt/qemu_aarch64_virt_defconfig
 export BR2_DEFCONFIG
 #MYPWD=$(pwd)
 #ARCH=arm64
