@@ -21,6 +21,12 @@ fi
 set -e 
 cd `dirname $0`
 
+cp buildroot_working_menuconfig.config buildroot/.config
+bash complete-assignment.sh
+
+
+
+
 if [ ! -e buildroot/.config ]
 then
 	echo "MISSING BUILDROOT CONFIGURATION FILE"

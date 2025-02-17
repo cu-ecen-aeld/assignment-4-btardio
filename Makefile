@@ -16,7 +16,7 @@ CROSS_COMPILE=aarch64-none-linux-gnu-
 #export BR2_LINUX_KERNEL_DEFCONFIG
 
 all :
-	$(MAKE) -C buildroot menuconfig
+#	$(MAKE) -C buildroot menuconfig
 	$(MAKE) -C buildroot source
 	$(MAKE) -C buildroot
 #: copy_config_linux makebuildroot makekernel copykernel
