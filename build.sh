@@ -22,8 +22,27 @@ mkdir -p buildroot
 cp buildroot_working_menuconfig.config buildroot/.config
 
 ARCH=arm64
+CONFIG_DIR=base_external/package/aesd-assignments/
+export CONFIG_DIR
+BR2_EXTERNAL=base_external/package/aesd-assignments/
+export BR2_EXTERNAL
+BR2_DEFCONFIG=base_external/company/virt/qemu_aarch64_virt_defconfig
+export BR2_DEFCONFIG
+#MYPWD=$(pwd)
+#ARCH=arm64
+#BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE=/repo/base_external/company/virt/linux.config
+#export BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE
+CC=aarch64-none-linux-gnu-gcc
+export CC
+CXX=aarch64-none-linux-gnu-g++
+export CXX
+
+CROSS_COMPILE=aarch64-none-linux-gnu-
+export CROSS_COMPILE
+
+
 # make -C buildroot menuconfig
-make -C buildroot source   # download the files but doesnt seem to be working
+# make -C buildroot source   # download the files but doesnt seem to be working
 make -C buildroot
 
 bash manual-linux.sh

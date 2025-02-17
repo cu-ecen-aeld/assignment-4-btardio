@@ -11,7 +11,7 @@ MYPWD=$(pwd)
 if [ $# -lt 1 ]
 then
 	echo "Using default directory ${OUTDIR} for output"
-    mkdir -p ${OUTDIR}
+	mkdir -p ${OUTDIR}
 else
 	OUTDIR=$1
 	echo "Using passed directory ${OUTDIR} for output"
