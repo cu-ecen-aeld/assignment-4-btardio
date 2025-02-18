@@ -1,0 +1,9 @@
+
+
+buildroot/output/build contains packages for initfs
+
+buildroot/output/images contains generated start-qemu.sh and kernel Image and fs barebox-dt-2nd.img and rootfs.ext4
+
+base_external/package/aesd-assignments contains custom assignment for FS
+
+linux-stable/arch/arm64/boot/Image is kernel image

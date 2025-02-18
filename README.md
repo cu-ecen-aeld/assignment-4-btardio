@@ -1,11 +1,10 @@
+# Todo
+
+kernel headers match buildroot headers
 
 # Dev
 
 sudo docker build -t myubuntu . && sudo docker container run -it -v /var/run/docker.sock:/var/run/docker.sock -v ./:/repo myubuntu /bin/bash
-
-# Runner
-
-docker build -f ./DockerfileRunner . -t myrunner && sudo docker container run -it -v /var/run/docker.sock:/var/run/docker.sock myrunner /bin/bash
 
 # Overview
 

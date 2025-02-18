@@ -48,15 +48,18 @@ export CROSS_COMPILE
 
 MYDIR=$(pwd)
 
+if [ ! -f ./Image ]; then
+    bash ${MYDIR}/manual-linux.sh > outlogkernel
+    cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}
+fi
+
 make -C buildroot
 
 cd ${MYDIR}
 
-bash ${MYDIR}/manual-linux.sh > outlogkernel
-
 set -e
 
-cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}/buildroot/output/images
+cp ${MYDIR}/Image ${MYDIR}/buildroot/output/images
 
 set -e 
 cd `dirname $0`
