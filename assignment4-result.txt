@@ -1,10 +1,29 @@
 qemu-system-aarch64: -netdev user,id=eth0,hostfwd=tcp::10022-:22: Could not set up host forwarding rule 'tcp::10022-:22'
 SSH login successful, waiting 40 additional seconds for process startup
-wrong number of arguments
-wrong number of arguments
-/usr/bin//assignment-1-test.sh: line 21: finder-test.sh: not found
-/usr/bin//assignment-1-test.sh: line 24: add_validate_error: not found
+
+
+Using default value AELD_IS_FUN for string to write
+Using default value 10 for number of files to write
+Writing 10 files containing string AELD_IS_FUN to aeld-data
+aeld-data created
+Writing <AELD_IS_FUN> to <aeld-data/root1.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root2.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root3.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root4.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root5.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root6.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root7.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root8.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root9.txt>
+Writing <AELD_IS_FUN> to <aeld-data/root10.txt>
+The number of files are 10 and the number of matching lines are 10
+success
+
+
+
 Killing qemu
 ./assignment-autotest/test/assignment4-buildroot/assignment-test.sh: line 34: killall: command not found
-/repo/assignment-autotest/test/assignment4-buildroot
-Test of assignment assignment4-buildroot complete with success
+/repo/assignment-autotest/test/assignment4-buildroot                                                                                                                                                             Test of assignment assignment4-buildroot complete with success
+
+
+
