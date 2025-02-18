@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ARCH=arm64
 
 make

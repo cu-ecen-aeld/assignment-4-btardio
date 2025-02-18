@@ -59,6 +59,8 @@ COPY id_ed25519 /root/.ssh/id_ed25519
 RUN chmod +x /entrypoint.sh
 
 
+RUN apt-get install -y sshpass
+
 
 ENTRYPOINT ["/entrypoint.sh"]
 
