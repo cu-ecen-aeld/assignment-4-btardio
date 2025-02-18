@@ -1,0 +1,10 @@
+qemu-system-aarch64: -netdev user,id=eth0,hostfwd=tcp::10022-:22: Could not set up host forwarding rule 'tcp::10022-:22'
+SSH login successful, waiting 40 additional seconds for process startup
+wrong number of arguments
+wrong number of arguments
+/usr/bin//assignment-1-test.sh: line 21: finder-test.sh: not found
+/usr/bin//assignment-1-test.sh: line 24: add_validate_error: not found
+Killing qemu
+./assignment-autotest/test/assignment4-buildroot/assignment-test.sh: line 34: killall: command not found
+/repo/assignment-autotest/test/assignment4-buildroot
+Test of assignment assignment4-buildroot complete with success
