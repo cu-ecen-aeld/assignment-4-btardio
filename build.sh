@@ -1,6 +1,7 @@
 #!/bin/bash
 #Script to build buildroot configuration
 #Author: Siddhant Jajoo
+#Modified: Brandon Tardio
 
 source shared.sh
 
@@ -36,10 +37,7 @@ BR2_EXTERNAL=$(pwd)/base_external/package/aesd-assignments/
 export BR2_EXTERNAL
 BR2_DEFCONFIG=$(pwd)/base_external/company/virt/qemu_aarch64_virt_defconfig
 export BR2_DEFCONFIG
-#MYPWD=$(pwd)
-#ARCH=arm64
-#BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE=/repo/base_external/company/virt/linux.config
-#export BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE
+
 CC=aarch64-none-linux-gnu-gcc
 export CC
 CXX=aarch64-none-linux-gnu-g++
@@ -50,22 +48,15 @@ export CROSS_COMPILE
 
 MYDIR=$(pwd)
 
-#bash manual-linux.sh
-
-# make -C buildroot menuconfig
-# make -C buildroot source   # download the files but doesnt seem to be working
 make -C buildroot
 
 cd ${MYDIR}
 
-bash ${MYDIR}/manual-linux.sh
+bash ${MYDIR}/manual-linux.sh > outlogkernel
 
 set -e
 
 cp /tmp/aeld/linux-stable/arch/${ARCH}/boot/Image ${MYDIR}/buildroot/output/images
-
-#bash complete-assignment.sh
-
 
 set -e 
 cd `dirname $0`
