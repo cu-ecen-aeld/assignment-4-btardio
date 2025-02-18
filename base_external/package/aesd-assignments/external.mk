@@ -9,7 +9,7 @@
 
 # assignment 3 branch: assignment 4
 AESD_ASSIGNMENTS_VERSION = '0ff47964b3c0e3aa8031215019458bbba041cfb0'
-
+AESD_ASSIGNMENTS_VERSION = '75b8d35d7932410e55c3823ab5c7ab2845a33a9d'
 # assignment 3 branch: master 
 # AESD_ASSIGNMENTS_VERSION = '89fc0b862b9201f41ab45effe0cd755e8caf4174'
 
@@ -37,7 +37,7 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/full-test.sh $(TARGET_DIR)/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/bin
-
+	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/bin
 endef
 
 $(eval $(generic-package))
